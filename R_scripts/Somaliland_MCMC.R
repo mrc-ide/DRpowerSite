@@ -29,6 +29,8 @@
 #
 # Output files:
 #   outputs/mcmc.rds
+#
+# ------------------------------------------------------------------
 
 library(here)
 library(tidyverse)
@@ -78,8 +80,8 @@ mcmc <- run_mcmc(data = dat,
                  misc = list(n_sites = n_sites),
                  loglike = r_loglike,
                  logprior = r_logprior,
-                 burnin = 500,
-                 samples = 1e4,
+                 burnin = 1e3,
+                 samples = 1e5,
                  chains = 10,
                  pb_markdown = FALSE)
 
